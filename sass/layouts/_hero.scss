@@ -1,0 +1,27 @@
+.hero {
+  max-width: 1600px;
+  padding-top: 200px;
+  padding-bottom: 200px;
+  margin: auto;
+  background-color: #c4c4c4;
+  background-image: linear-gradient(to right, #2f303a40, #2f303a40),
+    url(../images/backgroung-Img.png);
+  &__title {
+    width: 696px;
+    margin: 0 auto;
+    text-align: center;
+    color: #ffffff;
+    @include font(900, 44px, 1.36, 0.06em);
+    text-transform: uppercase;
+  }
+  &__button {
+    display: block;
+    margin: 30px auto 0;
+    padding: 10px 32px;
+    border-radius: 4px;
+    border-style: none;
+    @include font(bold, 16px, 1.87, 0.06em);
+    color: #ffffff;
+    background: var(--active-color);
+  }
+}

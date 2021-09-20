@@ -1,0 +1,36 @@
+.team {
+  padding-top: 94px;
+  padding-bottom: 94px;
+  background-color: #f5f4fa;
+  &__title {
+    text-align: center;
+    margin-bottom: 50px;
+    @include font(bold, 36px, 1.17, 0.03em);
+    color: var(--maintext-color);
+  }
+}
+.team-list {
+  display: flex;
+  &__item {
+    &:not(:last-child) {
+      margin-right: 30px;
+    }
+    background-color: #ffffff;
+    border-color: #afb1b8;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 0 0 4px 4px;
+  }
+  &__data {
+    padding: 30px 32px;
+    text-align: center;
+  }
+  &__name {
+    margin-bottom: 10px;
+    @include font(500, 16px, 1.19, 0.03em);
+    color: var(--maintext-color);
+  }
+  &__prof {
+    margin-bottom: 16px;
+    @include font(400, 16px, 1.19, 0.03em);
+  }
+}

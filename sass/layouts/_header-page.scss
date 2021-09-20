@@ -1,0 +1,64 @@
+.header-page {
+  border-bottom: 1px solid #ececec;
+
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+  & .container {
+    display: flex;
+    flex-basis: auto;
+    align-items: center;
+  }
+}
+
+.header-nav {
+  display: flex;
+  align-items: center;
+}
+.header-menu {
+  display: flex;
+  margin-left: 94px;
+  &__item:not(:last-child) {
+    margin-right: 50px;
+  }
+  &__link {
+    padding: 32px 0;
+    color: var(--maintext-color);
+    position: relative;
+  }
+}
+
+.current::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 4px;
+  border-radius: 4px;
+  background-color: var(--active-color);
+  bottom: -1px;
+  left: 0;
+}
+.header-addr {
+  display: flex;
+  margin-left: auto;
+  &__item + &__item {
+    margin-left: 50px;
+  }
+  @each $icon in envelope, smartphone {
+    &__link-#{$icon} {
+      display: flex;
+      padding-top: 32px;
+      padding-bottom: 32px;
+      align-items: center;
+    }
+    &__icon-#{$icon} {
+      fill: #757575;
+      margin-right: 10px;
+    }
+    &__link-#{$icon}:hover &__icon-#{$icon},
+    &__link-#{$icon}:focus &__icon-#{$icon} {
+      fill: var(--active-color);
+    }
+  }
+}
