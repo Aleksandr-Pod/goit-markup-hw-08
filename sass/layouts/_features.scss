@@ -1,27 +1,29 @@
 .features {
-  padding-top: 94px;
-  padding-bottom: 94px;
+  padding-top: 60px;
+  padding-bottom: 60px;
 }
 .features-list {
   display: flex;
+  flex-direction: column;
   &__item {
-    width: 270px;
+    width: 450px;
     &:not(:last-child) {
-      margin-right: 30px;
+      margin-bottom: 30px;
     }
   }
   &__header {
     margin-bottom: 10px;
-    @include font(bold, 14px, 1.14, 0.03em);
+    @include font(bold, 14px, 1.17, 0.03em);
     text-transform: uppercase;
+    text-align: center;
     color: var(--maintext-color);
   }
   &__text {
-    padding-right: 10px;
+    // padding-right: 10px;
     @include font(400, 14px, 1.71, 0.03em);
   }
   &__icon-block {
-    padding: 25px 100px;
+    padding: 25px 190px;
     margin-bottom: 30px;
     background-color: #f5f4fa;
     border-radius: 4px;

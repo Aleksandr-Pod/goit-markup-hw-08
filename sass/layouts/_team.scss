@@ -1,19 +1,20 @@
 .team {
-  padding-top: 94px;
-  padding-bottom: 94px;
+  padding-top: 60px;
+  padding-bottom: 60px;
   background-color: #f5f4fa;
   &__title {
     text-align: center;
     margin-bottom: 50px;
-    @include font(bold, 36px, 1.17, 0.03em);
+    @include font(bold, 28px, 1.18, 0.03em);
     color: var(--maintext-color);
   }
 }
 .team-list {
   display: flex;
+  flex-direction: column;
   &__item {
     &:not(:last-child) {
-      margin-right: 30px;
+      margin-bottom: 30px;
     }
     background-color: #ffffff;
     border-color: #afb1b8;
@@ -21,7 +22,7 @@
     border-radius: 0 0 4px 4px;
   }
   &__data {
-    padding: 30px 32px;
+    padding: 30px 122px 24px;
     text-align: center;
   }
   &__name {
