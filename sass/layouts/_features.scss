@@ -5,6 +5,8 @@
 .features-list {
   display: flex;
   flex-direction: column;
+  margin: -15px 0;
+
   @media screen and (min-width: 768px) {
     flex-direction: row;
     flex-wrap: wrap;
@@ -17,8 +19,10 @@
   }
   &__item {
     width: 320px;
+    margin: 15px auto;
     @media screen and (min-width: 480px) {
-      width: 480px;
+      width: 450px;
+      margin: 15px;
     }
     @media screen and (min-width: 768px) {
       width: 354px;
