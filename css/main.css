@@ -273,7 +273,7 @@ img {
 }
 
 .features-list__item {
-  width: 320px;
+  width: 290px;
   margin: 15px auto;
 }
 
@@ -317,7 +317,7 @@ img {
 }
 
 .features-list__icon-block {
-  padding: 25px 125px;
+  padding: 25px 110px;
   margin-bottom: 30px;
   background-color: #f5f4fa;
   border-radius: 4px;
@@ -368,6 +368,7 @@ img {
 
 .what-we-do__list {
   display: flex;
+  justify-content: center;
 }
 
 .what-we-do__item {
@@ -421,7 +422,6 @@ img {
   .team-list {
     flex-direction: row;
     flex-wrap: wrap;
-    margin: -15px 0;
   }
 }
 
@@ -429,12 +429,10 @@ img {
   .team-list {
     flex-direction: row;
     flex-wrap: nowrap;
-    margin: -15px 0;
   }
 }
 
 .team-list__item {
-  width: 290px;
   margin: 15px auto;
   background-color: #ffffff;
   border-color: #afb1b8;

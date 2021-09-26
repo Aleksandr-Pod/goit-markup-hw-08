@@ -18,7 +18,7 @@
     margin: -15px 0;
   }
   &__item {
-    width: 320px;
+    width: 290px;
     margin: 15px auto;
     @media screen and (min-width: 480px) {
       width: 450px;
@@ -45,7 +45,7 @@
     @include font(400, 14px, 1.71, 0.03em);
   }
   &__icon-block {
-    padding: 25px 125px;
+    padding: 25px 110px;
     margin-bottom: 30px;
     background-color: #f5f4fa;
     border-radius: 4px;
