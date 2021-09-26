@@ -12,17 +12,46 @@
 .team-list {
   display: flex;
   flex-direction: column;
+  @media screen and (min-width: 768px) {
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: -15px 0;
+  }
+  @media screen and (min-width: 1200px) {
+    flex-direction: row;
+    flex-wrap: nowrap;
+    margin: -15px 0;
+  }
   &__item {
-    &:not(:last-child) {
-      margin-bottom: 30px;
+    @media screen and (min-width: 480px) {
+      max-width: 480px;
+      margin: 15px;
     }
+    @media screen and (min-width: 768px) {
+      width: 354px;
+      margin: 15px;
+    }
+    @media screen and (min-width: 1200px) {
+      width: 270px;
+      margin: 15px;
+    }
+
     background-color: #ffffff;
     border-color: #afb1b8;
     box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 0 0 4px 4px;
   }
   &__data {
-    padding: 30px 122px 24px;
+    margin: 16px auto 24px;
+    // @media screen and (min-width: 480px) {
+    //   padding: 0 122px;
+    // }
+    // @media screen and (min-width: 768px) {
+    //   padding: 0 74px;
+    // }
+    // @media screen and (min-width: 1200px) {
+    //   padding: 0 32;
+    // }
     text-align: center;
   }
   &__name {
