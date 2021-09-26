@@ -273,8 +273,8 @@ img {
 }
 
 .features-list__item {
-  width: 290px;
-  margin: 15px auto;
+  width: 100vw;
+  margin: 15px 0;
 }
 
 @media screen and (min-width: 480px) {
@@ -317,28 +317,11 @@ img {
 }
 
 .features-list__icon-block {
-  padding: 25px 110px;
+  padding: 25px 0;
+  text-align: center;
   margin-bottom: 30px;
   background-color: #f5f4fa;
   border-radius: 4px;
-}
-
-@media screen and (min-width: 480px) {
-  .features-list__icon-block {
-    padding: 25px 190px;
-  }
-}
-
-@media screen and (min-width: 768px) {
-  .features-list__icon-block {
-    padding: 25px 142px;
-  }
-}
-
-@media screen and (min-width: 1200px) {
-  .features-list__icon-block {
-    padding: 25px 100px;
-  }
 }
 
 .features-list__icon {
@@ -433,7 +416,8 @@ img {
 }
 
 .team-list__item {
-  margin: 15px auto;
+  width: 100vw;
+  margin: 15px 0;
   background-color: #ffffff;
   border-color: #afb1b8;
   box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
@@ -543,17 +527,33 @@ img {
 
 .client-list {
   display: flex;
-  margin: 0;
-}
-
-.client-list__item {
-  width: 170px;
-  height: 92px;
+  flex-wrap: wrap;
+  margin: -15px 0;
   justify-content: center;
 }
 
-.client-list__item:not(:last-child) {
-  margin-right: 30px;
+.client-list__item {
+  margin: 15px;
+  height: 92px;
+  width: 210px;
+}
+
+@media screen and (min-width: 480px) {
+  .client-list__item {
+    width: 210px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .client-list__item {
+    width: 226px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .client-list__item {
+    width: 170px;
+  }
 }
 
 .client-list__link {

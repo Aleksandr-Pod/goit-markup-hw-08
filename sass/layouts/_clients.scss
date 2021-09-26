@@ -9,13 +9,21 @@
 }
 .client-list {
   display: flex;
-  margin: 0;
+  flex-wrap: wrap;
+  margin: -15px 0;
+  justify-content: center;
   &__item {
-    width: 170px;
+    margin: 15px;
     height: 92px;
-    justify-content: center;
-    &:not(:last-child) {
-      margin-right: 30px;
+    width: 210px;
+    @media screen and (min-width: 480px) {
+      width: 210px;
+    }
+    @media screen and (min-width: 768px) {
+      width: 226px;
+    }
+    @media screen and (min-width: 1200px) {
+      width: 170px;
     }
   }
   &__link {

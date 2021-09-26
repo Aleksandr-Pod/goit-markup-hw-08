@@ -16,15 +16,14 @@
   @media screen and (min-width: 768px) {
     flex-direction: row;
     flex-wrap: wrap;
-    // margin: -15px 0;
   }
   @media screen and (min-width: 1200px) {
     flex-direction: row;
     flex-wrap: nowrap;
-    // margin: -15px 0;
   }
   &__item {
-    margin: 15px auto;
+    width: 100vw;
+    margin: 15px 0;
     @media screen and (min-width: 480px) {
       width: 450px;
       margin: 15px;
@@ -45,15 +44,6 @@
   }
   &__data {
     margin: 16px auto 24px;
-    // @media screen and (min-width: 480px) {
-    //   padding: 0 122px;
-    // }
-    // @media screen and (min-width: 768px) {
-    //   padding: 0 74px;
-    // }
-    // @media screen and (min-width: 1200px) {
-    //   padding: 0 32;
-    // }
     text-align: center;
   }
   &__name {
