@@ -813,8 +813,19 @@ img {
 
 .filter {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   margin-bottom: 50px;
+}
+
+@media screen and (max-width: 768px) {
+  .filter {
+    justify-content: left;
+    margin: -8px 0 42px;
+  }
+  .filter__item {
+    margin: 8px 0;
+  }
 }
 
 .filter__item:not(:last-child) {
