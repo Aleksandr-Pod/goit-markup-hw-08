@@ -17,6 +17,7 @@
   transform: translateX(0);
 }
 .menu-toggle {
+  margin-left: auto;
   @media screen and (min-width: 768px) {
     display: none;
   }

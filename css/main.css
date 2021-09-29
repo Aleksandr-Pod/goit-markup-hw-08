@@ -227,6 +227,7 @@ img {
   .header-addr {
     display: flex;
     flex-direction: row;
+    font-size: 14px;
   }
   .header-addr__link-envelope {
     margin-right: 50px;
@@ -1097,6 +1098,10 @@ img {
 
 .menu-container.is-open {
   transform: translateX(0);
+}
+
+.menu-toggle {
+  margin-left: auto;
 }
 
 @media screen and (min-width: 768px) {

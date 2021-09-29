@@ -69,15 +69,16 @@
   @media screen and (min-width: 768px) {
     display: flex;
     flex-direction: column;
+    font-size: 12px;
     &__link-envelope {
       margin-right: 0;
       margin-bottom: 10px;
     }
-    font-size: 12px;
   }
   @media screen and (min-width: 1200px) {
     display: flex;
     flex-direction: row;
+    font-size: 14px;
     &__link-envelope {
       margin-right: 50px;
       margin-bottom: 0;
