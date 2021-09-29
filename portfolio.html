@@ -256,7 +256,7 @@
               <li class="contacts__item">
                 <a
                   href="https://www.google.com/maps/d/viewer?msa=0&mid=10uSM3H-mIU3GznYo2szRIEphczw&ll=50.427407309700655%2C30.538310300981728&z=18"
-                  class="contact-addressletter link"
+                  class="contacts__item-addr link"
                   target="_blank"
                   noopener
                   noreferrer
@@ -264,12 +264,14 @@
                 >
               </li>
               <li class="contacts__item">
-                <a href="mailto:info@example.com" class="link footer-tel"
+                <a
+                  href="mailto:info@example.com"
+                  class="link contacts__item-addr"
                   >info@example.com</a
                 >
               </li>
               <li class="contacts__item">
-                <a href="tel:+380991111111" class="link footer-tel"
+                <a href="tel:+380991111111" class="link contacts__item-tel"
                   >+38 099 111 11 11</a
                 >
               </li>
@@ -337,12 +339,13 @@
           <p>Подпишитесь на рассылку</p>
           <form action="#" class="email-field">
             <input
+              class="subscription-block__input"
               type="email"
               name="email"
               placeholder="E-mail"
               autocomplete="off"
             />
-            <button type="submit" class="subscription-btn">
+            <button type="submit" class="subscription-block__btn">
               Подписаться
               <svg class="icon-send">
                 <use href="./images/icons.svg#icon-send"></use>

@@ -5,77 +5,116 @@
   padding-bottom: 60px;
   .container {
     display: flex;
+    flex-direction: column;
+
+    @media screen and (min-width: 480px) {
+      flex-direction: column;
+      align-items: center;
+    }
+    @media screen and (min-width: 768px) {
+      flex-direction: row;
+      align-items: baseline;
+      justify-content: space-around;
+      flex-wrap: wrap;
+    }
+    @media screen and (min-width: 1200px) {
+      flex-direction: row;
+      align-items: baseline;
+      justify-content: space-around;
+    }
   }
 }
 
 .address-block {
-  margin-right: 70px;
-}
-.contact-addressletter {
-  @include font(400, 14px, 1.71, 0.03em);
-  font-style: normal;
-  color: #ffffff;
-}
-.footer-tel {
-  @include font(400, 14px, 1.71, 0.03em);
-  font-style: normal;
-  color: rgba(255, 255, 255, 0.6);
+  margin-bottom: 60px;
+  text-align: center;
+  @media screen and (min-width: 1200px) {
+    margin-bottom: 0;
+    text-align: left;
+  }
 }
 .contacts {
   margin-top: 20px;
   &__item:not(:last-child) {
     margin-bottom: 9px;
   }
+  &__item {
+    @include font(400, 14px, 1.71, 0.03em);
+    font-style: normal;
+    text-align: center;
+    &-addr {
+      color: #ffffff;
+    }
+    &-tel {
+      color: rgba(255, 255, 255, 0.6);
+    }
+    @media screen and (min-width: 1200px) {
+      text-align: left;
+    }
+  }
 }
 .social-block {
-  margin-top: 12px;
-  margin-bottom: 40px;
-}
-
-.subscription-block {
-  margin: 12px 0 40px auto;
+  margin-bottom: 60px;
+  @media screen and (min-width: 1200px) {
+    margin-top: 12px;
+    margin-bottom: 40px;
+  }
 }
 .social-block p,
 .subscription-block p {
   margin-bottom: 20px;
-
   color: #ffffff;
   @include font(bold, 14px, 1.14, 0.03em);
   text-transform: uppercase;
-}
-.subscription-block input {
-  padding: 15px 16px;
-  margin-right: 12px;
-  width: 358px;
-
-  color: #ffffff;
-
-  border: 1px solid #ffffff4d;
-  border-radius: 4px;
-  background-color: transparent;
-  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.15);
-  &::placeholder {
-    color: #ffffff99;
-
-    font-size: 16px;
-    line-height: 1.25;
-    letter-spacing: 0.03em;
+  text-align: center;
+  @media screen and (min-width: 1200px) {
+    text-align: left;
   }
 }
-.email-field {
-  display: flex;
-}
-.subscription-btn {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 10px 28px;
+.subscription-block {
+  padding: 0 15px;
+  .email-field {
+    @media screen and (min-width: 1200px) {
+      display: flex;
+      flex-direction: row;
+    }
+  }
+  &__input {
+    padding: 15px 16px;
+    margin-bottom: 20px;
+    width: 100%;
+    @media screen and (min-width: 480px) {
+      width: 450px;
+    }
+    @media screen and (min-width: 1200px) {
+      margin-right: 12px;
+      margin-bottom: 0;
+      width: 358px;
+    }
+    color: #ffffff;
+    border: 1px solid #ffffff4d;
+    border-radius: 4px;
+    background-color: transparent;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.15);
+    &::placeholder {
+      color: #ffffff99;
+      font-size: 16px;
+      line-height: 1.25;
+      letter-spacing: 0.03em;
+    }
+  }
+  &__btn {
+    display: flex;
+    align-items: center;
+    padding: 10px 28px;
+    margin: 0 auto;
 
-  border: none;
-  border-radius: 4px;
-  background-color: var(--active-color);
-  color: var(--activebutton-textcolor);
-  @include font(700, 16px, 1.87, 0.06em);
+    border: none;
+    border-radius: 4px;
+    background-color: var(--active-color);
+    color: var(--activebutton-textcolor);
+    @include font(700, 16px, 1.87, 0.06em);
+  }
 }
 .icon-send {
   width: 24px;

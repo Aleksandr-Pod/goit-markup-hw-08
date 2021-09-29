@@ -1,14 +1,17 @@
 .header-page {
   border-bottom: 1px solid #ececec;
-
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 1.14;
-  letter-spacing: 0.02em;
+  @include font(500, 14px, 1.14, 0.02em);
   & .container {
     display: flex;
-    flex-basis: auto;
-    align-items: center;
+    padding: 10px 15px;
+    @media screen and (min-width: 768px) {
+      padding: 21px 15px;
+    }
+    @media screen and (min-width: 1200px) {
+      flex-basis: baseline;
+      align-items: center;
+      padding: 26px 15px;
+    }
   }
 }
 
@@ -17,8 +20,6 @@
   align-items: center;
 }
 .header-menu {
-  display: flex;
-  margin-left: 94px;
   &__item:not(:last-child) {
     margin-right: 50px;
   }
@@ -27,8 +28,16 @@
     color: var(--maintext-color);
     position: relative;
   }
+  display: none;
+  @media screen and (min-width: 768px) {
+    display: flex;
+    margin-left: 88px;
+  }
+  @media screen and (min-width: 1200px) {
+    display: flex;
+    margin-left: 94px;
+  }
 }
-
 .current::after {
   content: "";
   position: absolute;
@@ -36,29 +45,42 @@
   height: 4px;
   border-radius: 4px;
   background-color: var(--active-color);
-  bottom: -1px;
+  bottom: -3px;
   left: 0;
 }
 .header-addr {
-  display: flex;
+  display: none;
   margin-left: auto;
-  &__item + &__item {
-    margin-left: 50px;
-  }
   @each $icon in envelope, smartphone {
     &__link-#{$icon} {
       display: flex;
-      padding-top: 32px;
-      padding-bottom: 32px;
       align-items: center;
     }
     &__icon-#{$icon} {
       fill: #757575;
       margin-right: 10px;
+      align-items: center;
     }
     &__link-#{$icon}:hover &__icon-#{$icon},
     &__link-#{$icon}:focus &__icon-#{$icon} {
       fill: var(--active-color);
+    }
+  }
+  @media screen and (min-width: 768px) {
+    display: flex;
+    flex-direction: column;
+    &__link-envelope {
+      margin-right: 0;
+      margin-bottom: 10px;
+    }
+    font-size: 12px;
+  }
+  @media screen and (min-width: 1200px) {
+    display: flex;
+    flex-direction: row;
+    &__link-envelope {
+      margin-right: 50px;
+      margin-bottom: 0;
     }
   }
 }
