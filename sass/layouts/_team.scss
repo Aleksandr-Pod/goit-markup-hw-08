@@ -1,18 +1,24 @@
 .team {
-  padding-top: 60px;
-  padding-bottom: 60px;
+  padding: 60px 0;
   background-color: #f5f4fa;
   &__title {
     text-align: center;
-    margin-bottom: 50px;
+    margin-bottom: 30px;
     @include font(bold, 28px, 1.18, 0.03em);
     color: var(--maintext-color);
+    @media screen and (min-width: 1200px) {
+      @include font(bold, 36px, 1.17, 0.03em);
+      margin-bottom: 50px;
+    }
+  }
+  @media screen and (min-width: 1200px) {
+    padding: 94px 0;
   }
 }
 .team-list {
   display: flex;
   flex-direction: column;
-  margin: -15px 15px;
+  // margin: -15px 0;
   @media screen and (min-width: 768px) {
     flex-direction: row;
     flex-wrap: wrap;
@@ -24,11 +30,11 @@
     margin: -15px 0;
   }
   &__item {
-    width: calc(100vw - 30px);
+    width: 100vw;
     margin: 15px 0;
     @media screen and (min-width: 480px) {
       width: 450px;
-      margin: 15px 0;
+      margin: 15px;
     }
     @media screen and (min-width: 768px) {
       width: 354px;

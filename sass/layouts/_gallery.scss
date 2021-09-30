@@ -1,18 +1,23 @@
 .gallery {
-  padding-top: 94px;
-  padding-bottom: 94px;
+  padding: 60px 0;
+}
+.gallery .container {
+  padding: 0 15px;
 }
 .filter {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
-  margin-bottom: 50px;
-  @media screen and (max-width: 768px) {
-    justify-content: left;
-    margin: -8px 0 42px;
-    &__item {
-      margin: 8px 0;
-    }
+  justify-content: left;
+  margin: -8px 0 22px;
+  &__item {
+    margin: 8px 0;
+  }
+  @media screen and (min-width: 768px) {
+    justify-content: center;
+    margin-bottom: 30px;
+  }
+  @media screen and (min-width: 1200px) {
+    margin-bottom: 50px;
   }
 }
 .filter__item:not(:last-child) {
@@ -42,7 +47,7 @@
 .cards-list {
   display: flex;
   flex-wrap: wrap;
-  margin: -15px 0;
+  margin: -15px;
   &__item {
     margin: 15px;
   }
