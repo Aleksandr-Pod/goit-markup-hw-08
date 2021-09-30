@@ -71,6 +71,10 @@
   color: #757575;
 }
 .card__link {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  flex-grow: 1;
   text-decoration: none;
 }
 .card__link:focus .over-text,
