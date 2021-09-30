@@ -64,27 +64,25 @@
     border: 1px solid #eeeeee;
   }
 }
-
+.card__link {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  flex-grow: 1;
+  text-decoration: none;
+}
+.card__link:focus .over-text,
+.card__link:hover .over-text {
+  transform: translateY(0%);
+}
 .card-data__header {
   margin-bottom: 4px;
-  word-wrap: normal;
   @include font(700, 18px, 2, 0.06em);
   color: var(--maintext-color);
 }
 .card-data__type {
   @include font(400, 16px, 1.88, 0.03em);
   color: #757575;
-}
-.card__link {
-  // display: flex;
-  // flex-direction: column;
-  // height: 100%;
-  // flex-grow: 1;
-  text-decoration: none;
-}
-.card__link:focus .over-text,
-.card__link:hover .over-text {
-  transform: translateY(0%);
 }
 .overlay {
   position: relative;
