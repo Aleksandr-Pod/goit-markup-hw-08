@@ -974,6 +974,7 @@ img {
 }
 
 .cards-list__data {
+  flex-grow: 1;
   padding: 20px 24px;
   border: 1px solid #eeeeee;
 }
