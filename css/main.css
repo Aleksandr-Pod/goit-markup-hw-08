@@ -419,6 +419,12 @@ img {
   color: var(--maintext-color);
 }
 
+@media screen and (min-width: 768px) {
+  .features-list__header {
+    text-align: left;
+  }
+}
+
 .features-list__text {
   font-weight: 400;
   font-size: 14px;
@@ -908,11 +914,21 @@ img {
   display: flex;
   flex-wrap: wrap;
   justify-content: left;
-  margin: -8px 0 22px;
+  margin-bottom: 25px;
 }
 
 .filter__item {
-  margin: 8px 0;
+  margin-bottom: 15px;
+}
+
+@media screen and (min-width: 768px) {
+  .filter__item {
+    margin-bottom: 0;
+  }
+}
+
+.filter__item:not(:last-child) {
+  margin-right: 8px;
 }
 
 @media screen and (min-width: 768px) {
@@ -926,10 +942,6 @@ img {
   .filter {
     margin-bottom: 50px;
   }
-}
-
-.filter__item:not(:last-child) {
-  margin-right: 8px;
 }
 
 .filter__button {
@@ -946,8 +958,7 @@ img {
   transition: color var(--time-anim) var(--trform-style), background-color var(--time-anim) var(--trform-style), box-shadow var(--time-anim) var(--trform-style);
 }
 
-.filter__button:hover,
-.filter__button:focus {
+.filter__button:hover, .filter__button:focus {
   color: var(--activebutton-textcolor);
   background-color: #2196f3;
   box-shadow: 0px 4px 4px #00000040;
@@ -961,11 +972,18 @@ img {
 
 .cards-list__item {
   margin: 15px;
+  width: 450px;
 }
 
-@media screen and (min-width: 768px) and (max-width: 1200px) {
+@media screen and (min-width: 768px) {
   .cards-list__item {
     width: 354px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .cards-list__item {
+    width: 370px;
   }
 }
 

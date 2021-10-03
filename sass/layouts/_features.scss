@@ -41,9 +41,11 @@
     text-transform: uppercase;
     text-align: center;
     color: var(--maintext-color);
+    @media screen and(min-width: 768px) {
+      text-align: left;
+    }
   }
   &__text {
-    // padding-right: 10px;
     @include font(400, 14px, 1.71, 0.03em);
   }
   &__icon-block {
